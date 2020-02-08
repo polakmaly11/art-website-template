@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Varela Round', sans-serif;
+  color: #00303f;
+  font-size: 1.2em;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(58, 58, 58);
+    color: white;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(58, 58, 58);
+    color: white;
+  }
+  
+  #navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #navbar a {
+    display: block;
+    line-height: 5em;
+    padding: 0 20px;
+    color: rgb(216, 216, 216);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.7em;
+  }
+  
+  #navbar a:hover {
+    background-color: rgb(43, 43, 43);
+  }
+
+  #main-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #welcome-section {
+    height: 70vh;
+    padding: 30vh 20px 0 20px;
+    background: linear-gradient(0deg, #fff, #CDE1DC);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+  }
