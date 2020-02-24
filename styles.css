@@ -39,7 +39,7 @@ header {
 #logo {
   padding: 30px;
 }
-  
+
 #navbar ul {
   display: flex;
   flex-direction: row;
@@ -132,5 +132,28 @@ footer p {
 }
 #footer a:hover {
   color: rgb(141, 141, 141);
+}
+
+.title
+{
+  text-align: center;
+}
+
+.creators
+{
+  text-align: left;
+  font-size: 30px;
+  background-color: rgb(240, 240, 240);
+  max-width: 1024px;
+}
+
+.body_pres_page
+{
+  background-image: url("images/cala_mitjana.jpg");
+  box-sizing: border-box;
+  margin: 50;
+  padding: 0;
+  font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: rgb(36, 36, 36);
 }
 /* END OF GENERAL STYLES */
