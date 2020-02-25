@@ -6,6 +6,53 @@
   <title>Feedback Form - Rate and comment our service</title>
   <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .form-row {
+    text-align: center;
+    margin: 40px 0;
+    }
+
+    .rows-left {
+    display: inline-block;
+    width: 35%;
+    text-align: right;
+    margin-right: 8px;
+    vertical-align: top;
+    margin-top: 7px;
+    }
+
+    .rows-right {
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+    color: black;
+    }
+
+    .form-field {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    padding: 10px;
+    outline: none;
+    }
+
+    .form-field:focus {
+    animation-name: focus;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+    }
+    @keyframes focus {
+        100% {
+        border: 2px solid rgb(204, 120, 107);
+        box-sizing: border-box;
+        outline: none;
+        padding: 9px;
+        }
+    }
+  </style>
 </head>
 
 <body>
@@ -44,19 +91,25 @@
     <!-- FROM HERE MAIN CONTENT -->
         <section class="contentContainer">
             <div class="content">
-                <h1>Hello, That is a home page:kapakapa</h1>
-                <p>Lorem ipsum dolor sit amet, persius explicari consequuntur no vis, ut cibo principes vis. Legendos deseruisse per at. Audire nominati ea vix, sed consul putant indoctum ea. Modo melius maiorum pro id. Cu purto vituperatoribus vel, eu vix deseruisse necessitatibus.</p>
+                <h1>We appreciate your feedback!</h1>
 
-                <p>Ex meliore partiendo signiferumque cum. Has doming offendit ut. No sit liber assueverit necessitatibus, an deleniti delectus recusabo mei. Vis illum tincidunt eu, nostro possim accusata nec an.</p>
+                <p>Comments from out users help us improve our services, therefore feel free to leave your thoughts and rate our website using the form below.</p>
+
+                <form action="POST">
+                    <div class="form-row">
+                        <div class="rows-left">
+                          <label for="name" id="name-label">
+                            * Name:
+                          </label>
+                        </div>
+                        <div class="rows-right">
+                          <input class="form-field" type="text" id="name" name="name" required placeholder="Enter your name or nickname">
+                        </div>
+                      </div>
+                </form>
             </div>
         </section>
 
-        <section class="contentContainer">
-            <div class="content">
-                <h1>Hello, This is coursework page:</h1>
-                <p>Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it's not genuine, correct, or comprehensible Latin anymore. While lorem ipsum's still resembles classical Latin, it actually has no meaning whatsoever. As Cicero's text doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.</p>
-            </div>
-        </section>
     <!-- UNTIL HERE MAIN CONTENT -->
     </div>
 
@@ -76,5 +129,9 @@
     </footer>
     <!-- END OF FOOTER PART -->
 
+    <!-- JavaScript FROM HERE -->
+    <script>
+
+    </script>
 </body>
 </html>
