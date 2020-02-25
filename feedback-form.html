@@ -8,6 +8,15 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
+    form {
+    padding-top: 50px;
+    text-align: center;
+    }
+    form p {
+    font-size: 0.8em;
+    color: red;
+    }
+
     .form-row {
     text-align: center;
     margin: 40px 0;
@@ -36,21 +45,40 @@
     border: 1px solid #c0c0c0;
     border-radius: 3px;
     padding: 10px;
+    font-size: 0.8em;
     outline: none;
+    transition-timing-function: ease;
+    transition: 0.4s;
     }
 
     .form-field:focus {
-    animation-name: focus;
-    animation-duration: 700ms;
-    animation-fill-mode: forwards;
+    border: 2px solid rgb(133, 119, 151);
+    box-sizing: border-box;
+    outline: none;
+    padding: 9px;
     }
-    @keyframes focus {
-        100% {
-        border: 2px solid rgb(204, 120, 107);
-        box-sizing: border-box;
-        outline: none;
-        padding: 9px;
-        }
+
+    .radio-select {
+    padding-top: 10px;
+    }
+
+    button {
+    display: block;
+    padding: 15px;
+    width: 70%;
+    background-color: rgb(55, 135, 146);
+    border: 2px solid rgb(55, 135, 146);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: white;
+    transition-timing-function: ease;
+    transition: 0.4s;
+    }
+
+    button:hover {
+    background-color: rgb(87, 170, 181);
     }
   </style>
 </head>
@@ -95,17 +123,81 @@
 
                 <p>Comments from out users help us improve our services, therefore feel free to leave your thoughts and rate our website using the form below.</p>
 
-                <form action="POST">
+                
+                <form action="GET">
+                    
+                    <p>* - please mind, marked fields are compulsory</p>
                     <div class="form-row">
                         <div class="rows-left">
-                          <label for="name" id="name-label">
+                            <label for="name">
                             * Name:
-                          </label>
+                            </label>
                         </div>
                         <div class="rows-right">
-                          <input class="form-field" type="text" id="name" name="name" required placeholder="Enter your name or nickname">
+                            <input class="form-field" type="text" id="name" name="name" placeholder="Enter your name">
                         </div>
-                      </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="rows-left">
+                            <label for="email">
+                            E-mail:
+                            </label>
+                        </div>
+                        <div class="rows-right">
+                            <input class="form-field" type="email" id="email" name="email" placeholder="Enter your email">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="rows-left">
+                            <label for="comment">
+                            Comment:
+                            </label>
+                        </div>
+                        <div class="rows-right">
+                          <textarea class="form-field" type="text" id="comment" name="comment" placeholder="Write short opinion about our website..." style="height: 90px; resize: vertical; font-family: Arial;"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="rows-left">
+                            <label for="rating">
+                                * How do you rate our website:
+                            </label>
+                        </div>
+                        <div class="rows-right">
+                            <div class="radio-select">
+                                <input type="radio" id="very-poor" name="rating">
+                                <label for="very-poor">Very Poor</label>
+                            </div>
+                            <div class="radio-select">
+                                <input type="radio" id="poor" name="rating">
+                                <label for="poor">Poor</label>
+                            </div>
+                            <div class="radio-select">
+                                <input type="radio" id="average" name="rating">
+                                <label for="average">Average</label>
+                            </div>
+                            <div class="radio-select">
+                                <input type="radio" id="good" name="rating">
+                                <label for="good">Good</label>
+                            </div>
+                            <div class="radio-select">
+                                <input type="radio" id="excellent" name="rating">
+                                <label for="excellent">Excellent</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="rows-left">
+                        </div>
+                        <div class="rows-right">
+                            <button id="submit" type="submit">Submit</button>
+                        </div>
+                    </div>
+
                 </form>
             </div>
         </section>
