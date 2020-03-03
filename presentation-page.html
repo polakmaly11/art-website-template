@@ -10,8 +10,18 @@
   <style>
   h1{align: center;}
   </style>
+  <script>
+    var size;
+    function incfont()
+    {
+      var t = document.getElementById('fontsize').value;
+      var x = document.getElementById('text');
+      x.style.fontSize = t+"px";
+      size =t;
+      document.getElementById('size') .innerHTML = size;
+    }
+  </script>
 </head>
-</header>
 
 <body class="body_pres_page">
 <!-- HEADER PART -->
@@ -19,7 +29,9 @@
   <div id="pageWrapper">
     <section class="contentContainer">
       <div class="content">
-        <div class="title">Photography Online Gallery</div>
+        <span id="text">
+          Photography Online Gallery
+      </span>
     </section>
   </div>
   <div id="pageWrapper">
@@ -47,6 +59,8 @@
         </ul>
       </nav>
       <p>Copyright © 2020</p>
+      <span><input type="range" onmousemove="incfont();" id="fontsize" min="10" max="60" value="20" style="width:100%" /></span>
+      <label style="display:block;">Font Size:<span id="size">30</span></label><br>
     </footer>
     <!-- END OF FOOTER PART -->
 
