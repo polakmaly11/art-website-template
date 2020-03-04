@@ -18,9 +18,28 @@
     color: red;
     }
 
+    form p.error {
+    animation: shakeError 75ms 5 ease-in alternate;
+    }
+    @keyframes shakeError {
+
+0% {
+
+margin-left: 10px;
+
+}
+
+100% {
+
+margin-left: 0;
+
+}
+}
+
     .form-row {
     text-align: center;
     margin: 40px 0;
+    max-height: 37px;
     }
 
     .rows-left {
@@ -133,7 +152,7 @@
                             * Name:
                             </label>
                         </div>
-                        <div class="rows-right">
+                        <div class="rows-right" id="nameRow">
                             <input class="form-field" type="text" id="name" name="name" placeholder="Enter your name">
                         </div>
                     </div>
@@ -223,19 +242,18 @@
 
     <!-- JavaScript FROM HERE -->
     <script>
+      var errorAlert = "Form submission unsuccessful!\nSee errors below.";
 
       function validateForm() {
-        nameValue = document.getElementById("name").value;
+        var nameValue = document.getElementById("name").value;
         if (nameValue == "") {
-          alert("Name cannot be empty!")
+          alert(errorAlert);
+          document.getElementById("nameRow").innerHTML += "<p class=\"error\">Field Name has to be filled out!</p>";
           return false;
         } else {
           return true;
         }
       }
-
-      // document.forms["feedback"].addEventListener("submit", v);
-
     </script>
 </body>
 </html>
