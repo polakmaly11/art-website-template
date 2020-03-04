@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
+
     form {
     padding-top: 50px;
     text-align: center;
@@ -122,9 +123,8 @@
                 <h1>We appreciate your feedback!</h1>
 
                 <p>Comments from out users help us improve our services, therefore feel free to leave your thoughts and rate our website using the form below.</p>
-
                 
-                <form action="GET">
+                <form name="feedback">
                     
                     <p>* - please mind, marked fields are compulsory</p>
                     <div class="form-row">
@@ -168,23 +168,23 @@
                         </div>
                         <div class="rows-right">
                             <div class="radio-select">
-                                <input type="radio" id="very-poor" name="rating">
+                                <input type="radio" id="very-poor" name="rating" value="very poor">
                                 <label for="very-poor">Very Poor</label>
                             </div>
                             <div class="radio-select">
-                                <input type="radio" id="poor" name="rating">
+                                <input type="radio" id="poor" name="rating" value="poor">
                                 <label for="poor">Poor</label>
                             </div>
                             <div class="radio-select">
-                                <input type="radio" id="average" name="rating">
+                                <input type="radio" id="average" name="rating" value="average">
                                 <label for="average">Average</label>
                             </div>
                             <div class="radio-select">
-                                <input type="radio" id="good" name="rating">
+                                <input type="radio" id="good" name="rating" value="good">
                                 <label for="good">Good</label>
                             </div>
                             <div class="radio-select">
-                                <input type="radio" id="excellent" name="rating">
+                                <input type="radio" id="excellent" name="rating" value="excellent">
                                 <label for="excellent">Excellent</label>
                             </div>
                         </div>
@@ -223,6 +223,12 @@
 
     <!-- JavaScript FROM HERE -->
     <script>
+
+      function popup() {
+        alert("Siema siema dziala!!!")
+      }
+
+      document.forms["feedback"].addEventListener("submit", popup);
 
     </script>
 </body>
