@@ -124,7 +124,7 @@
 
                 <p>Comments from out users help us improve our services, therefore feel free to leave your thoughts and rate our website using the form below.</p>
                 
-                <form name="feedback">
+                <form name="feedback" onsubmit="return validateForm()">
                     
                     <p>* - please mind, marked fields are compulsory</p>
                     <div class="form-row">
@@ -224,11 +224,17 @@
     <!-- JavaScript FROM HERE -->
     <script>
 
-      function popup() {
-        alert("Siema siema dziala!!!")
+      function validateForm() {
+        nameValue = document.getElementById("name").value;
+        if (nameValue == "") {
+          alert("Name cannot be empty!")
+          return false;
+        } else {
+          return true;
+        }
       }
 
-      document.forms["feedback"].addEventListener("submit", popup);
+      // document.forms["feedback"].addEventListener("submit", v);
 
     </script>
 </body>
