@@ -20,7 +20,6 @@
 </head>
 
 <body>
-<span id="text">
 <div id="homeImgContainer"></div>
 
 <header>
@@ -56,7 +55,7 @@
   <h1>Fill Your Space With beautiful Views</h1>
   <p>Buy photo prints and canvas</p>
 </section>
-
+<span id="text">
 <div id="pageWrapper">
       <section class="contentContainer">
         <div class="content">
@@ -74,6 +73,9 @@
         </div>
       </section>
 </div>
+<span><input type="range" onclick="incfont();" id="fontsize" min="20" max="40" value="20" style="width:100%" /></span>
+<label style="display:block;">Font Size:<span id="size">20</span></label><br>
+</span>
 
 
 <footer>
@@ -89,8 +91,5 @@
   </nav>
   <p>Copyright © 2020</p>
 </footer>
-<span><input type="range" onmousemove="incfont();" id="fontsize" min="20" max="40" value="30" style="width:100%" /></span>
-<label style="display:block;">Font Size:<span id="size">30</span></label><br>
-</span>
 </body>
 </html>
