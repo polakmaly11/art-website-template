@@ -248,6 +248,7 @@
 
       function validateForm() {
         var nameValue = document.getElementById("name").value;
+        var commentValue = document.getElementById("comment").value;
         var radioArray = document.getElementsByName("rating");
         var radioSelectedValue = "";
 
@@ -266,7 +267,8 @@
           document.getElementById("radio-right-row").innerHTML += "<p class=\"error\">Rating option has to be chosen!</p>";
           return false;
         } else {
-          return true;
+          return confirm("Dear " + nameValue + ",\nThank you very much for your feedback. You have rated our site as '" + radioSelectedValue + "' and your comment is ''" + commentValue + "''.\n\n By clicking 'OK' you confirm sending following feedback to us.");
+
         }
       }
     </script>
