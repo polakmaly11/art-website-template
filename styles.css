@@ -137,7 +137,7 @@ footer p {
 .title
 {
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   font-style: oblique;
 }
 
@@ -159,7 +159,7 @@ footer p {
   font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
   color: rgb(36, 36, 36);
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 .examples{
   background:#FFF;
