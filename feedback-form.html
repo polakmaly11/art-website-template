@@ -86,6 +86,7 @@
     button {
     display: block;
     padding: 15px;
+    margin-top: 20px;
     width: 70%;
     background-color: rgb(55, 135, 146);
     border: 2px solid rgb(55, 135, 146);
@@ -248,7 +249,7 @@
       function validateForm() {
         var nameValue = document.getElementById("name").value;
         var radioArray = document.getElementsByName("rating");
-        var radioSelectedValue = "empty";
+        var radioSelectedValue = "";
 
         for (let i=0; i<radioArray.length; i++) {
           if (radioArray[i].checked) {
@@ -260,9 +261,8 @@
           alert(errorAlert);
           document.getElementById("name-right-row").innerHTML += "<p class=\"error\">Field Name has to be filled out!</p>";
           return false;
-        } else if (1<2) {
+        } else if (radioSelectedValue == "") {
           alert(errorAlert);
-          console.log(radioSelectedValue);
           document.getElementById("radio-right-row").innerHTML += "<p class=\"error\">Rating option has to be chosen!</p>";
           return false;
         } else {
