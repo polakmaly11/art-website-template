@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback Form - Rate and comment our service</title>
+  <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    form {
+    padding-top: 50px;
+    text-align: center;
+    }
+    form p {
+    font-size: 0.8em;
+    }
+
+    p.error {
+    color: red;
+    animation: shake 75ms 5 ease-in alternate;
+    }
+    @keyframes shake {
+    0% {
+      margin-left: 10px;
+      }
+    100% {
+      margin-left: 0;
+      }
+    }
+
+    p.success {
+        color: green;
+        font-size: 1em;
+        animation: shake 75ms 5 ease-in alternate;
+    }
+
+    .form-row {
+    text-align: center;
+    margin: 40px 0;
+    }
+
+    .name-row {
+    max-height: 37px;
+    }
+
+    .rows-left {
+    display: inline-block;
+    width: 35%;
+    text-align: right;
+    margin-right: 8px;
+    vertical-align: top;
+    margin-top: 7px;
+    }
+
+    .rows-right {
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+    color: black;
+    }
+
+    .form-field {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 0.8em;
+    outline: none;
+    transition-timing-function: ease;
+    transition: 0.4s;
+    }
+
+    .form-field:focus {
+    border: 2px solid rgb(133, 119, 151);
+    box-sizing: border-box;
+    outline: none;
+    padding: 9px;
+    }
+
+    .radio-select {
+    padding-top: 10px;
+    }
+
+    .radio-row {
+      max-height: 145px;
+    }
+
+    button {
+    display: block;
+    padding: 15px;
+    margin-top: 20px;
+    width: 70%;
+    background-color: rgb(55, 135, 146);
+    border: 2px solid rgb(55, 135, 146);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: white;
+    transition-timing-function: ease;
+    transition: 0.4s;
+    }
+
+    button:hover {
+    background-color: rgb(87, 170, 181);
+    }
+  </style>
+</head>
+
+<body>
+<!-- HEADER PART -->
+    <header>
+      <div id="logo">
+        <div>//Logo here//</div>
+      </div>
+      <nav id="navbar">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="#shop">Shop</a>
+          </li>
+          <li>
+            <a href="#london">London</a>
+          </li>
+          <li>
+            <a href="#quiz">Quiz</a>
+          </li>
+          <li>
+            <a href="feedback.html">Feedback</a>
+          </li>
+          <li>
+            <a href="#siteMap">Site Map</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="underHeader"></div>
+    <!-- END OF HEADER PART -->
+
+    <div id="pageWrapper">
+    <!-- FROM HERE MAIN CONTENT -->
+        <section class="contentContainer">
+            <div class="content">
+                <h1>We appreciate your feedback!</h1>
+
+                <p>Comments from out users help us improve our services, therefore feel free to leave your thoughts and rate our website using the form below.</p>
+
+                <form name="feedback" action="feedback-success.html" method="post" onsubmit="return validateForm()">
+                    <p class="success">Your feedback has been sent. You can now leave this page.</p>
+                    <div class="form-row name-row">
+                        <div class="rows-left">
+                            <label for="name">
+                            * Name:
+                            </label>
+                        </div>
+                        <div class="rows-right" id="name-right-row">
+                            <input class="form-field" type="text" id="name" name="name" placeholder="Enter your name">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="rows-left">
+                            <label for="email">
+                            E-mail:
+                            </label>
+                        </div>
+                        <div class="rows-right">
+                            <input class="form-field" type="email" id="email" name="email" placeholder="Enter your email">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="rows-left">
+                            <label for="comment">
+                            Comment:
+                            </label>
+                        </div>
+                        <div class="rows-right">
+                          <textarea class="form-field" type="text" id="comment" name="comment" placeholder="Write short opinion about our website..." style="height: 90px; resize: vertical; font-family: Arial;"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row radio-row">
+                        <div class="rows-left">
+                            <label for="rating">
+                                * How do you rate our website:
+                            </label>
+                        </div>
+                        <div class="rows-right" id="radio-right-row">
+                            <div class="radio-select">
+                                <input type="radio" id="very-poor" name="rating" value="very poor">
+                                <label for="very-poor">Very Poor</label>
+                            </div>
+                            <div class="radio-select">
+                                <input type="radio" id="poor" name="rating" value="poor">
+                                <label for="poor">Poor</label>
+                            </div>
+                            <div class="radio-select">
+                                <input type="radio" id="average" name="rating" value="average">
+                                <label for="average">Average</label>
+                            </div>
+                            <div class="radio-select">
+                                <input type="radio" id="good" name="rating" value="good">
+                                <label for="good">Good</label>
+                            </div>
+                            <div class="radio-select">
+                                <input type="radio" id="excellent" name="rating" value="excellent">
+                                <label for="excellent">Excellent</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="rows-left">
+                        </div>
+                        <div class="rows-right">
+                            <button id="submit" type="submit">Submit</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+    <!-- UNTIL HERE MAIN CONTENT -->
+    </div>
+
+    <!-- FOOTER PART -->
+    <footer>
+      <nav id="footer">
+        <ul>
+          <li>
+            <a href="#pageEditor">Page Editor</a>
+          </li>
+          <li>
+            <a href="#something">Something</a>
+          </li>
+        </ul>
+      </nav>
+      <p>Copyright © 2020</p>
+    </footer>
+    <!-- END OF FOOTER PART -->
+
+    <!-- JavaScript FROM HERE -->
+    <script>
+      const errorAlert = "Form submission unsuccessful!\nSee errors below.";
+
+      function validateForm() {
+        var nameValue = document.getElementById("name").value;
+        var commentValue = document.getElementById("comment").value;
+        var radioArray = document.getElementsByName("rating");
+        var radioSelectedValue = "";
+
+        for (let i=0; i<radioArray.length; i++) {
+          if (radioArray[i].checked) {
+            radioSelectedValue = radioArray[i].value;
+          }
+        }
+
+        if (nameValue == "") {
+          alert(errorAlert);
+          document.getElementById("name-right-row").innerHTML += "<p class=\"error\">Field Name has to be filled out!</p>";
+          return false;
+        } else if (radioSelectedValue == "") {
+          alert(errorAlert);
+          document.getElementById("radio-right-row").innerHTML += "<p class=\"error\">Rating option has to be chosen!</p>";
+          return false;
+        } else {
+          return confirm("Dear " + nameValue + ",\nThank you very much for your feedback. You have rated our site as '" + radioSelectedValue + "' and your comment is ''" + commentValue + "''.\n\n By clicking 'OK' you confirm sending following feedback to us.");
+        }
+      }
+
+    </script>
+</body>
+</html>
