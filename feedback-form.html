@@ -22,26 +22,23 @@
     animation: shakeError 75ms 5 ease-in alternate;
     }
     @keyframes shakeError {
-
-0% {
-
-margin-left: 10px;
-
-}
-
-100% {
-
-margin-left: 0;
-
-}
-}
+    0% {
+      margin-left: 10px;
+      }
+    100% {
+      margin-left: 0;
+      }
+    }
 
     .form-row {
     text-align: center;
     margin: 40px 0;
-    max-height: 37px;
     }
 
+    .name-row {
+    max-height: 37px;
+    }
+  
     .rows-left {
     display: inline-block;
     width: 35%;
@@ -80,6 +77,10 @@ margin-left: 0;
 
     .radio-select {
     padding-top: 10px;
+    }
+
+    .radio-row {
+      max-height: 145px;
     }
 
     button {
@@ -146,13 +147,13 @@ margin-left: 0;
                 <form name="feedback" onsubmit="return validateForm()">
                     
                     <p>* - please mind, marked fields are compulsory</p>
-                    <div class="form-row">
+                    <div class="form-row name-row">
                         <div class="rows-left">
                             <label for="name">
                             * Name:
                             </label>
                         </div>
-                        <div class="rows-right" id="nameRow">
+                        <div class="rows-right" id="name-right-row">
                             <input class="form-field" type="text" id="name" name="name" placeholder="Enter your name">
                         </div>
                     </div>
@@ -179,13 +180,13 @@ margin-left: 0;
                         </div>
                     </div>
 
-                    <div class="form-row">
+                    <div class="form-row radio-row">
                         <div class="rows-left">
                             <label for="rating">
                                 * How do you rate our website:
                             </label>
                         </div>
-                        <div class="rows-right">
+                        <div class="rows-right" id="radio-right-row">
                             <div class="radio-select">
                                 <input type="radio" id="very-poor" name="rating" value="very poor">
                                 <label for="very-poor">Very Poor</label>
@@ -242,13 +243,27 @@ margin-left: 0;
 
     <!-- JavaScript FROM HERE -->
     <script>
-      var errorAlert = "Form submission unsuccessful!\nSee errors below.";
+      const errorAlert = "Form submission unsuccessful!\nSee errors below.";
 
       function validateForm() {
         var nameValue = document.getElementById("name").value;
+        var radioArray = document.getElementsByName("rating");
+        var radioSelectedValue = "empty";
+
+        for (let i=0; i<radioArray.length; i++) {
+          if (radioArray[i].checked) {
+            radioSelectedValue = radioArray[i].value;
+          }
+        }
+
         if (nameValue == "") {
           alert(errorAlert);
-          document.getElementById("nameRow").innerHTML += "<p class=\"error\">Field Name has to be filled out!</p>";
+          document.getElementById("name-right-row").innerHTML += "<p class=\"error\">Field Name has to be filled out!</p>";
+          return false;
+        } else if (1<2) {
+          alert(errorAlert);
+          console.log(radioSelectedValue);
+          document.getElementById("radio-right-row").innerHTML += "<p class=\"error\">Rating option has to be chosen!</p>";
           return false;
         } else {
           return true;
