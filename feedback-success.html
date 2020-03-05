@@ -15,19 +15,25 @@
     }
     form p {
     font-size: 0.8em;
-  }
-  
-  p.error {
-    color: red;
-    animation: shakeError 75ms 5 ease-in alternate;
     }
-    @keyframes shakeError {
+  
+    p.error {
+    color: red;
+    animation: shake 75ms 5 ease-in alternate;
+    }
+    @keyframes shake {
     0% {
       margin-left: 10px;
       }
     100% {
       margin-left: 0;
       }
+    }
+
+    p.success {
+        color: green;
+        font-size: 1em;
+        animation: shake 75ms 5 ease-in alternate;
     }
 
     .form-row {
@@ -146,10 +152,7 @@
                 <p>Comments from out users help us improve our services, therefore feel free to leave your thoughts and rate our website using the form below.</p>
                 
                 <form name="feedback" action="feedback-success.html" method="post" onsubmit="return validateForm()">
-                    <div class="rows-left"></div>
-                    <div id="message-container" class="rows-right">
-                      <p class="error">* - please mind, marked fields are compulsory</p>
-                    </div>
+                    <p class="success">Your feedback has been sent. You can now leave this page.</p>
                     <div class="form-row name-row">
                         <div class="rows-left">
                             <label for="name">
