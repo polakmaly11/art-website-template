@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Feedback Form - Rate and comment our service</title>
+  <title>Feedback Form - Your feedback has been sent</title>
   <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
@@ -15,9 +15,9 @@
     }
     form p {
     font-size: 0.8em;
-    }
+  }
   
-    p.error {
+  p.error {
     color: red;
     animation: shake 75ms 5 ease-in alternate;
     }
@@ -31,9 +31,9 @@
     }
 
     p.success {
-        color: green;
-        font-size: 1em;
-        animation: shake 75ms 5 ease-in alternate;
+    color: green;
+    animation: shake 75ms 5 ease-in alternate;
+    font-size: 1em;
     }
 
     .form-row {
@@ -152,7 +152,7 @@
                 <p>Comments from out users help us improve our services, therefore feel free to leave your thoughts and rate our website using the form below.</p>
                 
                 <form name="feedback" action="feedback-success.html" method="post" onsubmit="return validateForm()">
-                    <p class="success">Your feedback has been sent. You can now leave this page.</p>
+                    <p class="success">Success!<br>Your feedback has been sent. You can now leave this page.</p>
                     <div class="form-row name-row">
                         <div class="rows-left">
                             <label for="name">
@@ -161,6 +161,7 @@
                         </div>
                         <div class="rows-right" id="name-right-row">
                             <input class="form-field" type="text" id="name" name="name" placeholder="Enter your name">
+                            <span id="name-error"></span>
                         </div>
                     </div>
 
@@ -213,6 +214,7 @@
                                 <input type="radio" id="excellent" name="rating" value="excellent">
                                 <label for="excellent">Excellent</label>
                             </div>
+                            <span id="radio-error"></span>
                         </div>
                     </div>
 
@@ -250,12 +252,15 @@
     <!-- JavaScript FROM HERE -->
     <script>
       const errorAlert = "Form submission unsuccessful!\nSee errors below.";
+      var nameError = "<p class=\"error\">Field Name has to be filled out!</p>";
+      var radioError = "<p class=\"error\">Rating option has to be chosen!</p>";
+      var radioArray = document.getElementsByName("rating");
+      var radioSelectedValue = "";
 
       function validateForm() {
         var nameValue = document.getElementById("name").value;
         var commentValue = document.getElementById("comment").value;
-        var radioArray = document.getElementsByName("rating");
-        var radioSelectedValue = "";
+        var nameField = '<input class="form-field" type="text" id="name" name="name" placeholder="Enter your name">';
 
         for (let i=0; i<radioArray.length; i++) {
           if (radioArray[i].checked) {
@@ -265,16 +270,33 @@
 
         if (nameValue == "") {
           alert(errorAlert);
-          document.getElementById("name-right-row").innerHTML += "<p class=\"error\">Field Name has to be filled out!</p>";
+          document.getElementById("name-error").innerHTML = nameError;
           return false;
         } else if (radioSelectedValue == "") {
           alert(errorAlert);
-          document.getElementById("radio-right-row").innerHTML += "<p class=\"error\">Rating option has to be chosen!</p>";
+          document.getElementById("radio-error").innerHTML = radioError;
           return false;
         } else {
           return confirm("Dear " + nameValue + ",\nThank you very much for your feedback. You have rated our site as '" + radioSelectedValue + "' and your comment is ''" + commentValue + "''.\n\n By clicking 'OK' you confirm sending following feedback to us.");
         }
       }
+
+      document.getElementById("name").addEventListener("input", function(){
+        if (this.value == "") {
+          document.getElementById("name-error").innerHTML = nameError;
+        } else {
+          document.getElementById("name-error").innerHTML = "";
+        }
+      })
+
+      for (let i=0; i<radioArray.length; i++) {
+        radioArray[i].addEventListener("change", function(){
+          if (radioArray[i].checked) {
+            document.getElementById("radio-error").innerHTML = ""
+          }
+        })
+      }
+
       
     </script>
 </body>
