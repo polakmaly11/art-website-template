@@ -186,7 +186,7 @@
                             <p id="letters-limit"></p>
                         </div>
                         <div class="rows-right">
-                          <textarea class="form-field" type="text" id="comment" name="comment" placeholder="Write short opinion about our website..." maxlength="10" style="height: 90px; resize: vertical; font-family: Arial;"></textarea>
+                          <textarea class="form-field" type="text" id="comment" name="comment" placeholder="Write short opinion about our website..." maxlength="150" style="height: 90px; resize: vertical; font-family: Arial;"></textarea>
                         </div>
                     </div>
 
@@ -301,10 +301,11 @@
       }
 
       document.getElementById("comment").addEventListener("keydown", function(){
-        document.getElementById("letters-limit").innerHTML = this.value;
+        var currentInput = this.value;
+        var charLeft = 150;
+        document.getElementById("letters-limit").innerHTML = charLeft - currentInput.length - 1;
       })
 
-      
     </script>
 </body>
 </html>
