@@ -37,7 +37,12 @@ header {
   position: fixed;
 }
 #logo {
-  padding: 30px;
+  max-height: 79px;
+  max-width: 79px;
+}
+
+.logo-img {
+  height: 100%;
 }
   
 #navbar ul {
