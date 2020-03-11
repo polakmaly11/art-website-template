@@ -44,7 +44,7 @@ header {
 .logo-img {
   height: 100%;
 }
-  
+
 #navbar ul {
   display: flex;
   flex-direction: row;
@@ -137,5 +137,55 @@ footer p {
 }
 #footer a:hover {
   color: rgb(141, 141, 141);
+}
+
+.title
+{
+  text-align: center;
+  font-size: 30px;
+  font-style: oblique;
+}
+
+.creators
+{
+  text-align: center;
+  font-size: 30px;
+  background-color: rgb(240, 240, 240);
+  max-width: 1024px;
+  font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+
+.body_pres_page
+{
+  /*background-image: url("images/cala_mitjana.jpg");*/
+  box-sizing: border-box;
+  margin: 50;
+  padding: 0;
+  font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: rgb(36, 36, 36);
+  text-align: center;
+  font-size: 20px;
+}
+.examples{
+  background:#FFF;
+  width:800px;
+  font-size:80%;
+  border:1px #000 solid;
+  margin:3.5em auto 2em;
+  padding:1em 2em 2em
+}
+
+.column{float:left;
+  width:45%;
+  padding:20px
+}
+
+.box{-moz-border-radius:5px;
+  background-color:#DDD;
+  border:1px solid #000;
+  clear:both;
+  width:50%;
+  margin:10px auto;
+  padding:10px
 }
 /* END OF GENERAL STYLES */

@@ -6,6 +6,17 @@
   <title>Photography Online Gallery - Fill your home with beautiful pictures</title>
   <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    var size;
+    function incfont()
+    {
+      var t = document.getElementById('fontsize').value;
+      var x = document.getElementById('text');
+      x.style.fontSize = t+"px";
+      size =t;
+      document.getElementById('size') .innerHTML = size;
+    }
+  </script>
 </head>
 
 <body>
@@ -39,7 +50,7 @@
     </header>
     <div id="underHeader"></div>
     <!-- END OF HEADER PART -->
-
+  <span id="text">
     <div id="pageWrapper">
     <!-- FROM HERE MAIN CONTENT -->
         <section class="contentContainer">
@@ -57,8 +68,13 @@
                 <p>Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it's not genuine, correct, or comprehensible Latin anymore. While lorem ipsum's still resembles classical Latin, it actually has no meaning whatsoever. As Cicero's text doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.</p>
             </div>
         </section>
+        <div class="content">
+              <span><input type="range" onclick="incfont();" id="fontsize" min="20" max="40" value="20" style="width:100%" /></span>
+              <label style="display:block;">Font Size:<span id="size">20</span></label><br>
+        </div>
     <!-- UNTIL HERE MAIN CONTENT -->
     </div>
+    </span>
 
     <!-- FOOTER PART -->
     <footer>
@@ -75,6 +91,5 @@
       <p>Copyright © 2020</p>
     </footer>
     <!-- END OF FOOTER PART -->
-
 </body>
 </html>

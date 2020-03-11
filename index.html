@@ -6,10 +6,20 @@
   <title>Photography Online Gallery - Fill your home with beautiful pictures</title>
   <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    var size;
+    function incfont()
+    {
+      var t = document.getElementById('fontsize').value;
+      var x = document.getElementById('text');
+      x.style.fontSize = t+"px";
+      size =t;
+      document.getElementById('size') .innerHTML = size;
+    }
+  </script>
 </head>
 
 <body>
-
 <div id="homeImgContainer"></div>
 
 <header>
@@ -45,13 +55,13 @@
   <h1>Fill Your Space With beautiful Views</h1>
   <p>Buy photo prints and canvas</p>
 </section>
-
+<span id="text">
 <div id="pageWrapper">
       <section class="contentContainer">
         <div class="content">
           <h1>Hello, That is a home page:</h1>
           <p>Lorem ipsum dolor sit amet, persius explicari consequuntur no vis, ut cibo principes vis. Legendos deseruisse per at. Audire nominati ea vix, sed consul putant indoctum ea. Modo melius maiorum pro id. Cu purto vituperatoribus vel, eu vix deseruisse necessitatibus.</p>
-          
+
           <p>Ex meliore partiendo signiferumque cum. Has doming offendit ut. No sit liber assueverit necessitatibus, an deleniti delectus recusabo mei. Vis illum tincidunt eu, nostro possim accusata nec an.</p>
         </div>
       </section>
@@ -63,6 +73,9 @@
         </div>
       </section>
 </div>
+<span><input type="range" onclick="incfont();" id="fontsize" min="20" max="40" value="20" style="width:100%" /></span>
+<label style="display:block;">Font Size:<span id="size">20</span></label><br>
+</span>
 
 
 <footer>
@@ -78,6 +91,5 @@
   </nav>
   <p>Copyright © 2020</p>
 </footer>
-    
 </body>
 </html>
