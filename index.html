@@ -11,17 +11,7 @@
   h1{align: center;}
 
   </style>
-  <script>
-    var size;
-    function incfont()
-    {
-      var t = document.getElementById('fontsize').value;
-      var x = document.getElementById('text');
-      x.style.fontSize = t+"px";
-      size =t;
-      document.getElementById('size') .innerHTML = size;
-    }
-  </script>
+  
 </head>
 
 <body class="body_pres_page">
@@ -60,5 +50,17 @@
       <p>Copyright © 2020</p>
     </footer>
     <!-- END OF FOOTER PART -->
+
+    <script>
+      var size;
+      function incfont()
+      {
+        var t = document.getElementById('fontsize').value;
+        var x = document.getElementById('text');
+        x.style.fontSize = t+"px";
+        size =t;
+        document.getElementById('size') .innerHTML = size;
+      }
+    </script>
 </body>
 </html>
