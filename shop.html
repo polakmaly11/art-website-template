@@ -3,50 +3,140 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Feedback Form - Rate and comment our service</title>
+  <title>Online Shop</title>
   <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style media="screen">
+  .container {
+  width: 70%;
+  margin: 0 auto 2em;
+  padding: 1.5em;
+  background: #fff;
+}
+.cart-grid {
+    width: 20%;
+    float: left;
+    box-shadow: 5px 10px 10px 0px rgba(216, 216, 216, 0.78);
+    padding: 20px;
+}
+.cart-grid:hover img {
+    -webkit-transform: translateY(0px) scale(0.8);
+    -moz-transform: translateY(0px) scale(0.8);
+    -ms-transform: translateY(0px) scale(0.8);
+    -o-transform: translateY(0px) scale(0.8);
+    transform: translateY(0px) scale(0.8);
+}
+.img img {
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+.cart-grid:hover img {
+    -webkit-transform: translateY(0px) scale(0.8);
+    -moz-transform: translateY(0px) scale(0.8);
+    -ms-transform: translateY(0px) scale(0.8);
+    -o-transform: translateY(0px) scale(0.8);
+    transform: translateY(0px) scale(0.8);
+}
+  </style>
   </head>
   <body>
   <!-- HEADER PART -->
-      <header>
-        <div id="logo">
-          <div>//Logo here//</div>
+  <header>
+    <div id="logo">
+      <a href="home.html"><img class="logo-img" src="images/logo.jpg" alt="logo for online gallery"></a>
+    </div>
+    <nav id="navbar">
+      <ul>
+        <li>
+          <a href="home.html">Home</a>
+        </li>
+        <li>
+          <a href="#shop">Shop</a>
+        </li>
+        <li>
+          <a href="#quiz">Quiz</a>
+        </li>
+        <li>
+          <a href="feedback.html">Feedback</a>
+        </li>
+        <li>
+          <a href="galleries.html">Galleries</a>
+        </li>
+        <li>
+          <a href="#siteMap">Site Map</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+      <div class="cart-grid" id="cart-1">
+        <div class="img">
+          <img src="images/piotr.jpg" alt="img">
         </div>
-        <nav id="navbar">
-          <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="#shop">Shop</a>
-            </li>
-            <li>
-              <a href="#london">London</a>
-            </li>
-            <li>
-              <a href="#quiz">Quiz</a>
-            </li>
-            <li>
-              <a href="feedback.html">Feedback</a>
-            </li>
-            <li>
-              <a href="#siteMap">Site Map</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <footer>
-        <nav id="footer">
-          <ul>
-            <li>
-              <a href="#pageEditor">Page Editor</a>
-            </li>
-            <li>
-              <a href="#something">Something</a>
-            </li>
-          </ul>
-        </nav>
-        <p>Copyright © 2020</p>
-      </footer>
+        <ul class="info">
+          <li>$60.00</li>
+          <li class="right-text">$115.00</li>
+        </ul>
+        <div class="snipcart-details ">
+          <form action="#" method="post">
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="add" value="1">
+            <input type="hidden" name="w3l_item" value="Striped Top ">
+            <input type="hidden" name="amount" value="25.00">
+            <input type="hidden" name="item_name" value="Product #001" />
+            <button type="submit" class="button w3l-cart" data-id="cart-1">add to cart</button>
+          </form>
+        </div>
+      </div>
+      <div class="cart-grid" id="cart-2">
+        <div class="img">
+          <img src="images/piotr.jpg" alt="img">
+        </div>
+        <ul class="info">
+          <li>$95.00</li>
+          <li class="right-text">$195.00</li>
+        </ul>
+        <div class="snipcart-details ">
+          <form action="#" method="post">
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="add" value="1">
+            <input type="hidden" name="w3l_item" value="Striped Top ">
+            <input type="hidden" name="amount" value="25.00">
+            <input type="hidden" name="item_name" value="Product #002" />
+            <button type="submit" class="button w3l-cart" data-id="cart-3">add to cart</button>
+          </form>
+        </div>
+      </div>
+      <div class="cart-grid" id="cart-3">
+        <div class="img">
+          <img src="images/piotr.jpg" alt="img">
+        </div>
+        <ul class="info">
+          <li>$40.00</li>
+          <li class="right-text">$95.00</li>
+        </ul>
+        <div class="snipcart-details ">
+          <form action="#" method="post">
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="add" value="1">
+            <input type="hidden" name="w3l_item" value="Striped Top ">
+            <input type="hidden" name="amount" value="25.00">
+            <input type="hidden" name="item_name" value="Product #003" />
+            <button type="submit" class="button w3l-cart" data-id="cart-3">add to cart</button>
+          </form>
+        </div>
+      </div>
+  <footer>
+    <nav id="footer">
+      <ul>
+        <li>
+          <a href="#pageEditor">Page Editor</a>
+        </li>
+        <li>
+          <a href="#something">Something</a>
+        </li>
+      </ul>
+    </nav>
+    <p>Copyright © 2020</p>
+  </footer>
 </body>
