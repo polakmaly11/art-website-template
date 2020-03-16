@@ -30,6 +30,14 @@ background: #fff;
     -moz-transition: all 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
 }
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: auto;
+  padding-top: 10em;
+
+}
 
   </style>
   </head>
@@ -62,75 +70,62 @@ background: #fff;
       </ul>
     </nav>
   </header>
-  <div style="vertical-align:center">
+  <div class="flex">
+  <div>
     <div class="container">
       <div class="cart-grid">
         <div class="img">
           <img src="images/piotr.jpg" alt="img">
         </div>
-        <ul class="info">
+        <ul>
           <li>$60.00</li>
-          <li class="right-text">$115.00</li>
+          <li>$115.00</li>
         </ul>
-        <div class="snipcart-details ">
-          <form action="#" method="post">
-            <input type="hidden" name="cmd" value="_cart">
-            <input type="hidden" name="add" value="1">
-            <input type="hidden" name="w3l_item" value="Striped Top ">
-            <input type="hidden" name="amount" value="25.00">
-            <input type="hidden" name="item_name" value="Product #001" />
-            <button type="submit" class="button w3l-cart" data-id="cart-1">add to cart</button>
+        <div>
+          <form>
+            <button type="submit">add to cart</button>
           </form>
         </div>
       </div>
     </div>
   </div>
-  <div style="vertical-align:center">
+  <div style="align:center">
     <div class="container">
       <div class="cart-grid">
         <div class="img">
           <img src="images/piotr.jpg" alt="img">
         </div>
-        <ul class="info">
+        <ul>
           <li>$95.00</li>
-          <li class="right-text">$195.00</li>
+          <li >$195.00</li>
         </ul>
-        <div class="snipcart-details ">
-          <form action="#" method="post">
-            <input type="hidden" name="cmd" value="_cart">
-            <input type="hidden" name="add" value="1">
-            <input type="hidden" name="w3l_item" value="Striped Top ">
-            <input type="hidden" name="amount" value="25.00">
-            <input type="hidden" name="item_name" value="Product #002" />
-            <button type="submit" class="button w3l-cart" data-id="cart-3">add to cart</button>
+        <div >
+          <form>
+            <button type="submit">add to cart</button>
           </form>
         </div>
       </div>
     </div>
   </div>
-  <div style="vertical-align:center">
+  <div style="align:right">
     <div class="container">
       <div class="cart-grid">
         <div class="img">
           <img src="images/piotr.jpg" alt="img">
         </div>
-        <ul class="info">
+        <ul >
           <li>$40.00</li>
-          <li class="right-text">$95.00</li>
+          <li >$95.00</li>
         </ul>
-        <div class="snipcart-details ">
-          <form action="#" method="post">
-            <input type="hidden" name="cmd" value="_cart">
-            <input type="hidden" name="add" value="1">
-            <input type="hidden" name="w3l_item" value="Striped Top ">
-            <input type="hidden" name="amount" value="25.00">
-            <input type="hidden" name="item_name" value="Product #003" />
-            <button type="submit" class="button w3l-cart" data-id="cart-3">add to cart</button>
+        <div >
+          <form >
+            <button type="submit">add to cart</button>
           </form>
         </div>
       </div>
     </div>
   </div>
+</div>
   <div>
   <form class="jotform-form" action="https://submit.jotform.com/submit/200751729597364/" method="post" name="form_200751729597364" id="200751729597364" accept-charset="utf-8" autocomplete="on">
     <input type="hidden" name="formID" value="200751729597364" />
