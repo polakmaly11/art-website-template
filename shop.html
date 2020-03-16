@@ -47,6 +47,9 @@ img:hover
 {
   opacity: 0.7;
 }
+img
+{
+}
 .quantity {
   padding-top: 20px;
   margin-right: 60px;
@@ -113,53 +116,88 @@ input:focus {
     </nav>
   </header>
 <div class="flex">
-<div class="card">
+  <div class="card">
   <img src="images/stock.jpeg" alt="Denim Jeans" style="width:100%">
   <h1>One Photo</h1>
   <p class="price">£19.99</p>
   <p>One beutiful photo from any important for You occasion.</p>
   <div class="quantity">
   <button class="plus-btn" type="button" name="button">
-    <img src="images/plus.svg" alt="" />
+    <img src="images/plus.png" alt="" />
   </button>
   <input type="text" name="name" value="1">
   <button class="minus-btn" type="button" name="button">
-    <img src="images/minus.svg" alt="" />
+    <img src="images/minus.png" alt="" />
   </button>
   <p><button>Add to Cart</button></p>
-</div>
-</div>
-<div class="card">
+  </div>
+  </div>
+
+  <div class="card">
   <img src="images/stock.jpeg" alt="Denim Jeans" style="width:100%">
   <h1>10 Photos</h1>
   <p class="price">£29.99</p>
   <p>10 extraordianry photos from important for You occasion in choosen style and format.</p>
   <div class="quantity">
   <button class="plus-btn" type="button" name="button">
-    <img src="images/plus.svg" alt="" />
+    <img src="images/plus.png" alt="" />
   </button>
   <input type="text" name="name" value="1">
   <button class="minus-btn" type="button" name="button">
-    <img src="images/minus.svg" alt="" />
+    <img src="images/minus.png" alt="" />
   </button>
   </div>
   <p><button>Add to Cart</button></p>
-</div>
-<div class="card">
+  </div>
+
+  <div class="card">
   <img src="images/stock.jpeg" alt="Denim Jeans" style="width:100%">
   <h1>Photo Album</h1>
   <p class="price">£49.99</p>
   <p>Around 40-50 outstanding photos from important occasion to make memories last forever.</p>
   <div class="quantity">
   <button class="plus-btn" type="button" name="button">
-    <img src="images/plus.svg" alt="" />
+    <img src="images/plus.png" alt="" />
   </button>
   <input type="text" name="name" value="1">
   <button class="minus-btn" type="button" name="button">
-    <img src="images/minus.svg" alt="" />
+    <img src="images/minus.png" alt="" />
   </button>
   <p><button>Add to Cart</button></p>
- </div>
+  </div>
+  </div>
+  <script>
+  $('.minus-btn').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var value = parseInt($input.val());
+
+    if (value &amp;gt; 1) {
+        value = value - 1;
+    } else {
+        value = 0;
+    }
+
+  $input.val(value);
+
+});
+
+$('.plus-btn').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var value = parseInt($input.val());
+
+    if (value &amp;lt; 100) {
+        value = value + 1;
+    } else {
+        value =100;
+    }
+
+    $input.val(value);
+});
+</script>
 </div>
   <div>
   <form accept-charset="utf-8" autocomplete="on">
