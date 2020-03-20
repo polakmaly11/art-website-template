@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>setTimeout(function(){window.location.href='index.html'},4000);</script>
+  <title>Photography Online Gallery - Fill your home with beautiful pictures</title>
+  <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  h1{align: center;}
+
+  </style>
+  <script>
+    var size;
+    function incfont()
+    {
+      var t = document.getElementById('fontsize').value;
+      var x = document.getElementById('text');
+      x.style.fontSize = t+"px";
+      size =t;
+      document.getElementById('size') .innerHTML = size;
+    }
+  </script>
+</head>
+
+<body class="body_pres_page">
+  <span id="text">
+<!-- HEADER PART -->
+
+  <div id="pageWrapper">
+    <section class="contentContainer">
+      <div class="content">
+          Photography Online Gallery
+    </section>
+  </div>
+  <div id="pageWrapper">
+    <section class="contentContainer">
+      <div class="content">
+          <div>Wojciech Bandzerewicz</div>
+          <div>Piotr Stanny</div>
+          <div>Tariq Khider</div>
+          <div>Totic Iman</div>
+    </section>
+  </div>
+  <div class="content">
+        <span><input type="range" onclick="incfont();" id="fontsize" min="20" max="40" value="20" style="width:100%" /></span>
+        <label style="display:block;">Font Size:<span id="size">20</span></label><br>
+  </div>
+  </span>
+    <!-- FOOTER PART -->
+    <footer>
+      <nav id="footer">
+        <ul>
+          <li>
+            <a href="page-editor-wojciech.html">Page Editor</a>
+          </li>
+          <li>
+            <a href="#something">Something</a>
+          </li>
+        </ul>
+      </nav>
+      <p>Copyright © 2020</p>
+    </footer>
+    <!-- END OF FOOTER PART -->
+</body>
+</html>
